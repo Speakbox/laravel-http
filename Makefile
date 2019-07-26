@@ -3,3 +3,6 @@ build:
 
 run:
 	docker run -ti -p 80:80 speakbox/laravel-http:latest /bin/sh
+
+push:
+	docker push speakbox/laravel-http:latest
