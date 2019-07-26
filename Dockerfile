@@ -3,6 +3,8 @@ MAINTAINER Valentin Prugnaud <valentin@speakbox.ca>
 
 # Install nginx and php dependencies
 RUN apt-get update \
+    # supervisor
+    && apt-get install -y --no-install-recommends supervisor \
     # nginx
     && apt-get install -y --no-install-recommends nginx \
     # gd
