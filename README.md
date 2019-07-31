@@ -1,17 +1,33 @@
-# Dockerfiles
+# Laravel HTTP
 
-## foxted/laravel
+Creates a Laravel Docker image with php-fpm & nginx, optimized for HTTP.
 
-Creates a Laravel optimized Docker image with PHP & Nginx.
+[speakbox/laravel-http](https://hub.docker.com/r/speakbox/laravel-http)
 
-[foxted/laravel](https://hub.docker.com/r/foxted/laravel/)
+## Packages
 
-### Build & Push
+- php-fpm 7.3
+- nginx
+- curl
+- git
+- supervisor
+- composer
+
+## Ports
+
+- 80
+
+## Makefile
 
 ```bash
-$ cd laravel
-$ docker build -t foxted/laravel:tag .
-$ docker push foxted/laravel:tag
+// Build docker image
+$ make build
+
+// Run docker image
+$ make run
+
+// Push docker image
+$ make push
 ```
 
 ## Login to Docker Hub from CLI
